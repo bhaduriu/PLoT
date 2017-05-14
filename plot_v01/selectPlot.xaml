@@ -1,0 +1,75 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="plot_v01.selectPlot"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:plot_v01"
+    xmlns:common="using:plot_v01.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+        <Grid Grid.Row="1" x:Name="contentRegion"  Background="White">
+            <ListView x:Name="list" IsItemClickEnabled="True" Margin="30,30,30,30" ItemClick="list_ItemClick">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <StackPanel Orientation="Horizontal" Margin="10,0,10,0" >
+                            <Ellipse Height="75" Width="75" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,10,10,10">
+                                <Ellipse.Fill>
+                                    <ImageBrush x:Name="teamDisplayPicture" ImageSource="{Binding image}" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10,0,0,0">
+                                <TextBlock x:Name="plotName" Text="{Binding PartitionKey}" Foreground="Black" FontSize="28" HorizontalAlignment="Left"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </Grid>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="Select PLoT" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+    </Grid>
+</Page>

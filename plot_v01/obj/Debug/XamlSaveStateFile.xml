@@ -1,0 +1,10 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\loga\documents\plot\plot_v01\obj\debug\intermediatexaml\plot_v01.exe" HashGuid="3a31c6a8-6d06-4b84-6541-dc73ecf170ec" />
+    <ReferenceAssembly PathName="c:\users\loga\documents\plot\packages\microsoft.data.edm.5.7.0\lib\portable-net45+wp8+win8+wpa\microsoft.data.edm.dll" HashGuid="0286700a-130b-1631-97bb-2a29c945c748" />
+    <ReferenceAssembly PathName="c:\users\loga\documents\plot\packages\microsoft.data.odata.5.7.0\lib\portable-net45+wp8+win8+wpa\microsoft.data.odata.dll" HashGuid="07353d93-9026-3dda-e873-db75a8d46298" />
+    <ReferenceAssembly PathName="c:\users\loga\documents\plot\packages\windowsazure.storage.8.0.1\lib\win8\microsoft.windowsazure.storage.dll" HashGuid="3aca5160-0c11-ab2b-962c-563427c41dea" />
+    <ReferenceAssembly PathName="c:\users\loga\documents\plot\packages\newtonsoft.json.6.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fd3dfcab-cf69-c796-78a2-2423dadb814b" />
+    <ReferenceAssembly PathName="c:\users\loga\documents\plot\packages\system.spatial.5.7.0\lib\portable-net45+wp8+win8+wpa\system.spatial.dll" HashGuid="ad64f91a-ac26-7da5-98ef-6ac358d330f9" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
