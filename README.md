@@ -12,4 +12,4 @@
 <li>Azure Storage
 <li>XAML
 
-<h2>Duration</h2> Jan 2017 - Ongoing
+<h2>Download the App!</h2> https://www.microsoft.com/en-us/store/p/plot/9p7b74fnm2f1
